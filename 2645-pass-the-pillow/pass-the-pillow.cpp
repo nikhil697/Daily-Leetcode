@@ -1,21 +1,21 @@
 class Solution {
 public:
     int passThePillow(int n, int time) {
-        
-        int position=1;
-        int direction=1;
-        
-        for(int i=0;i<time;++i){
-            position=position+direction;
+        int j=1;
+        int count=1;
+        int i=1;
+        while(i<=time){
             
-            if(position==n){
-                direction=-1;
+            j=j+count;
+            
+            if(j==n){
+                count=-1;
             }
-            else if(position==1){
-                direction=1;
+            else if(j==1){
+                count=1;
             }
-        
-    }
-        return position;
+            i++;
+        }
+        return j;
     }
 };
