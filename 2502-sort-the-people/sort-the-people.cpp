@@ -8,8 +8,9 @@ public:
         }
         names.clear();
         
-        for (auto it = myMap.rbegin(); it != myMap.rend(); ++it) {
-            names.push_back(it->second);
+        sort(heights.begin(),heights.end());
+        for(int i=heights.size()-1;i>=0;i--){
+            names.push_back(myMap[heights[i]]);
         }
         
         return names;
